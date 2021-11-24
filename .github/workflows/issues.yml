@@ -7,10 +7,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
- steps:
-      # 
-      - name: Echo content of hook
-        run: |
-          echo "Event content : ${github.event.issues}"
-          echo "{{github.event.issues}}"
+
+    steps:
+        # 
+        - name: Echo content of hook
+          run: |
+            echo "Event content : ${github.event.issues}"
+            echo "{{github.event.issues}}"
