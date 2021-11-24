@@ -1,0 +1,16 @@
+name: New activity on issues
+
+on:
+  issues:
+    types: [opened, labeled, unlabeled]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+ steps:
+      # 
+      - name: Echo content of hook
+        run: |
+          echo "Event content : ${github.event.issues}"
+          echo "{{github.event.issues}}"
